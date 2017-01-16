@@ -1,6 +1,6 @@
 {
   "name": "debinding",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Remove process.binding, without breaking core.",
   "main": "index.js",
   "scripts": {
