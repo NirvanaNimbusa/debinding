@@ -1,11 +1,11 @@
-const oldNoDeprecation = process.noDeprecation;
+var oldNoDeprecation = process.noDeprecation;
 process.noDeprecation = true;
 Object.keys(process.binding('natives'))
-  .filter(k => !k.includes('/'))
-  .forEach(k => require(k));
+  .filter(function(k){return k.indexOf('/') === -1})
+  .forEach(function(k){require(k)});
 process.noDeprecation = oldNoDeprecation;
 
-const blank = {
+var blank = {
   configurable: false,
   writable: false,
   value: undefined
